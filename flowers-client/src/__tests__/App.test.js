@@ -4,7 +4,7 @@ import App from '../App';
 import { shallow } from 'enzyme';
 
 describe('Main App', () => {
-    it('renders without crashing', () => {
+    it('The full app enders without crashing', () => {
         shallow(<App />);
     });
 })
