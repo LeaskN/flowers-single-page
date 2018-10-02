@@ -27,9 +27,9 @@ class People extends Component {
                         <h2 style={{width:'100%'}}> Click a person </h2>
                         {
                             this.state.people.map(person => (
-                                <div className={ person.last } style={{ width:"33%" }}  key={person.id} onClick={() => this.singleItemClicked(person)}>
+                                <span className={ person.last } style={{ width:"33%" }}  key={person.id} onClick={() => this.singleItemClicked(person)}>
                                     <Person className="all-people" person={ person }/>
-                                </div>
+                                </span>
                             ))
                         }
                     </div>

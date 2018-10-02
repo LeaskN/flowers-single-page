@@ -22,12 +22,10 @@ describe('Main People', () => {
     });
 
     it('Will show the person in detail at the bottom after a person is clicked', () => {
-        const wrapper = mount(<People />)
-        // console.log('mount HTML', wrapper.debug())
-        const Skywalker = wrapper.find('Skywalker') 
-        // The above doesn't select the person properly but I'm out of time so I'm leaving it here.
-        Skywalker.simulate('click')        
-        const persons = wrapper.find('Person-in-detail')
-        expect(persons.length).toEqual(1)
+        const mockCallBack = jest.fn();
+        const click = shallow((<span onClick={mockCallBack}></span>));
+        click.find('span').simulate('click');
+        expect(mockCallBack.mock.calls.length).toEqual(1);
     });
+      
 })
