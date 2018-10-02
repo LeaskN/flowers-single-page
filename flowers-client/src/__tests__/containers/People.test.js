@@ -1,7 +1,8 @@
+// import 'jsdom-global/register';
 import React from 'react';
 import People from '../../containers/People';
 
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe('Main People', () => {
     it('renders without crashing', () => {
@@ -14,8 +15,9 @@ describe('Main People', () => {
         expect(peopleState).toEqual(8)
     });
 
-    // it('Will load a person when a person is clicked', () => {
-    //     const wrapper = shallow(<People />)
-    //     const person = wrapper.find(<Person />)
-    // });
+    it('Will not have a person at the bottom of the page', () => {
+        const wrapper = shallow(<People />)        
+        const persons = wrapper.find('Person-in-detail')
+        expect(persons.length).toEqual(0)
+    });
 })

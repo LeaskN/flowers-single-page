@@ -27,8 +27,8 @@ class People extends Component {
                         <h2 style={{width:'100%'}}> Click a person </h2>
                         {
                             this.state.people.map(person => (
-                                <div style={{ width:"33%" }}  key={person.id} onClick={() => this.singleItemClicked(person)}>
-                                    <Person person={ person }/>
+                                <div className={ person.last } style={{ width:"33%" }}  key={person.id} onClick={() => this.singleItemClicked(person)}>
+                                    <Person className="all-people" person={ person }/>
                                 </div>
                             ))
                         }
@@ -37,7 +37,7 @@ class People extends Component {
                 <div>
                 { !this.state.singleView ?
                     <h2 style={{height:'800px'}}> Click a person </h2>:
-                    <div class="row justify-content-center">
+                    <div className="Person-in-detail row justify-content-center">
                         <Person person={this.state.person} cols="col-6 " singleView={true} edit={true}/>
                     </div>
                  }
