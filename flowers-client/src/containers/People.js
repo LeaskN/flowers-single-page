@@ -7,7 +7,8 @@ class People extends Component {
         isLoading: true,
         people: [],
         singleView: false,
-        person: {}
+        person: {},
+        count: 0
     };
 
     componentDidMount() {        
