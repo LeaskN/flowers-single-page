@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 
 const Person = ({ person, cols, singleView, edit }) => (
     <div className={`card ${cols}`} >
@@ -14,11 +12,6 @@ const Person = ({ person, cols, singleView, edit }) => (
                     <p className="card-text">Location: { person.location }</p> 
                 </div> :
                 ''
-            }
-            {
-                edit ?
-                <Link to={`/people/${person.id}`} className="btn btn-primary">Edit Person </Link>:
-                <Link to={`/people/${person.id}`} className="btn btn-outline-info">About</Link>
             }
         </div>
     </div>
