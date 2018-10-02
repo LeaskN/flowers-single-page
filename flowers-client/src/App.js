@@ -4,10 +4,7 @@ import './App.css';
 
 import Header from './components/Header'
 import LandingPage from './components/LandingPage'
-import NotFound from './components/NotFound';
 import People from './containers/People';
-import ViewPerson from './containers/ViewPerson';
-import CreatePerson from './containers/CreatePerson';
 
 class App extends Component {
   render() {
@@ -18,9 +15,6 @@ class App extends Component {
           <Switch>
               <Route exact path ="/" component={LandingPage} />
               <Route exact path ="/people" component={People} />
-              <Route exact path ="/create/person" component={CreatePerson} />
-              <Route path ="/people/:id" component={ViewPerson} />
-              <Route path="*" component={NotFound} />
           </Switch>
         </main>
       </div>

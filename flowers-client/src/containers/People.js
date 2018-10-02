@@ -4,21 +4,11 @@ import allPeople from '../data/allPeople';
 
 class People extends Component {
     state = {
-        isLoading: true,
-        people: [],
+        people: allPeople,
         singleView: false,
         person: {},
         count: 0
     };
-
-    componentDidMount() {        
-            setTimeout(() => {
-                this.setState({
-                    people: allPeople,
-                    isLoading: false
-                });
-            }, 500);
-    }
 
     singleItemClicked = (person) => {
         this.setState({
@@ -32,8 +22,7 @@ class People extends Component {
         return (
             <div>
                 
-                { this.state.isLoading ? 
-                    <h2> Loading people </h2> : 
+                { 
                     <div className="row">
                         <h2 style={{width:'100%'}}> Click a person </h2>
                         {
