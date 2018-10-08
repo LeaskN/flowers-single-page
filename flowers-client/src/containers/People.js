@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Person from '../components/Person';
 import allPeople from '../data/allPeople';
+import 'bootswatch/dist/journal/bootstrap.css'
+
 
 class People extends Component {
     state = {

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Person = ({ person, cols, singleView, edit }) => (
-    <div className={`card ${cols}`} >
+const Person = ({ person, cols, singleView }) => (
+    <div className={`card ${person.first}`}>
         <img className="card-img-top" style={{cursor:"pointer"}} src={person.url} alt="Card cap"/>
         <div className="card-body">
             <h5 className="card-title" style={{cursor:"pointer"}} >{person.first} {person.last}</h5>
