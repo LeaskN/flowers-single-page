@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import 'bootswatch/dist/journal/bootstrap.css'
+
 
 import Header from './components/Header'
 import LandingPage from './components/LandingPage'
